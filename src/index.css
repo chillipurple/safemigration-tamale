@@ -1,31 +1,48 @@
+/* Import Hope Education Brand Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply font-sans antialiased;
+    @apply font-sans antialiased bg-cream text-gray-800;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-primary text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply bg-primary text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-primary-dark hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105;
   }
 
   .btn-secondary {
-    @apply bg-gray-200 text-gray-800 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-300 transition-colors;
+    @apply bg-secondary text-primary-dark px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-opacity-90 hover:shadow-xl transition-all duration-300 transform hover:scale-105;
   }
 
   .btn-danger {
-    @apply bg-danger text-white px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-red-600 transition-colors;
+    @apply bg-danger text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:bg-red-600 hover:shadow-xl transition-all duration-300 transform hover:scale-105;
   }
 
   .card {
-    @apply bg-white rounded-lg shadow-md p-6;
+    @apply bg-white rounded-2xl shadow-lg p-6 border-2 border-transparent hover:border-primary-light transition-all duration-300;
   }
 
   .input-field {
-    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent;
+    @apply w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-200;
+  }
+
+  /* Hope Education branded header */
+  .hep-header {
+    @apply bg-gradient-to-r from-primary to-primary-dark text-white shadow-lg;
+  }
+
+  /* Accent elements */
+  .accent-bar {
+    @apply h-1 w-16 bg-secondary rounded-full;
   }
 }

@@ -35,13 +35,16 @@ function App() {
   if (isAdmin) {
     return (
       <Router>
-        <div className="min-h-screen bg-gray-50">
-          <header className="bg-primary text-white p-4 shadow-md">
+        <div className="min-h-screen bg-cream">
+          <header className="hep-header p-6 shadow-xl">
             <div className="max-w-6xl mx-auto flex justify-between items-center">
-              <h1 className="text-xl font-bold">Safe Migration Admin</h1>
+              <div>
+                <h1 className="text-2xl font-heading font-bold">Safe Migration Admin</h1>
+                <p className="text-sm text-primary-light mt-1">Hope Education Project</p>
+              </div>
               <button
                 onClick={() => setIsAdmin(false)}
-                className="bg-white text-primary px-4 py-2 rounded font-semibold"
+                className="bg-white text-primary px-6 py-3 rounded-xl font-semibold hover:bg-secondary transition-all"
               >
                 Exit Admin
               </button>
@@ -56,7 +59,7 @@ function App() {
   // Onboarding flow
   if (showOnboarding) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-cream flex items-center justify-center">
         <UserRegistration onComplete={handleOnboardingComplete} />
       </div>
     );
@@ -65,12 +68,15 @@ function App() {
   // Main app
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50 pb-20">
+      <div className="min-h-screen bg-cream pb-20">
         {/* Header */}
-        <header className="bg-primary text-white p-4 shadow-md">
+        <header className="hep-header p-6 shadow-xl">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-2xl font-bold">Safe Migration</h1>
-            <p className="text-sm text-blue-100">Protecting Tamale from job fraud & trafficking</p>
+            <div className="flex items-center justify-between mb-2">
+              <h1 className="text-3xl font-heading font-bold tracking-tight">Safe Migration</h1>
+            </div>
+            <div className="accent-bar mb-2"></div>
+            <p className="text-base text-primary-light font-medium">Hope Education Project • Protecting Tamale from trafficking</p>
           </div>
         </header>
 
